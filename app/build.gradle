@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+//    signingConfigs {
+//        debug {
+//            //wt
+//            storeFile file('../../Sign/comwtdzxsdkdemo_AppSign_Release.keystore')
+//            storePassword "com.wt.dzxsdkdemo"
+//            keyAlias "com.wt.dzxsdkdemo"
+//            keyPassword "com.wt.dzxsdkdemo"
+//
+//        }
+//        release {
+//            //wt
+//            storeFile file('../../Sign/comwtdzxsdkdemo_AppSign_Release.keystore')
+//            storePassword "com.wt.dzxsdkdemo"
+//            keyAlias "com.wt.dzxsdkdemo"
+//            keyPassword "com.wt.dzxsdkdemo"
+//        }
+//    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.wt.dzxsdkdemo"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 19111723
+        versionName "2019.11.17"
+//        signingConfig signingConfigs.release
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}

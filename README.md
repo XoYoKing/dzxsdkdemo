@@ -1,0 +1,77 @@
+# 大珍象SDK Demo Android版
+调用大珍象SDK进行监控设备操作的Demo
+
+## 接口
+- DZXSDK.openUI_CameraList
+- DZXSDK.openUI_CameraRealPlay
+- DZXSDK.openUI_CameraPlayBack
+
+## 简单使用
+建议使用之前先把demo跑一下，我对已开放的接口的使用都进行了演示。
+
+- 拷贝 dzxsdk.aar及so库 到目录 app/libs
+    - 见Demo的目录 app/libs
+- 修改 build.gradle 增加对aar库的引用
+```
+dependencies {
+    ...
+    implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+    ...
+}
+```
+- 修改引用SDK的Activity的theme为@style/Theme.AppCompat.Light
+```
+        <activity
+            android:name=".FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+```
+- 调用SDK接口
+    - DZXSDK.openUI_CameraList
+```
+        String strUserID="oJ0qB1utZD9wm8c4rxl7eoBgmUkc";
+        DZXSDK.openUI_CameraList(this,strUserID);
+```
+    - DZXSDK.openUI_CameraRealPlay
+```
+        String strDeviceSerial="C32940646";
+        int iCameraIndex=4;
+        DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
+```
+    - DZXSDK.openUI_CameraPlayBack
+```
+        String strDeviceSerial="C32940646";
+        int iCameraIndex=4;
+        DZXSDK.openUI_CameraPlayBack(this,strDeviceSerial,iCameraIndex);
+```
+   
+## 联系我
+- 邮箱：59186618@qq.com
+
+## License
+```
+Copyright (c) 2019 YBX
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+# 参考： [大珍象APP](http://tuyun.ybxin.net/apk/dzxapp.apk)
+
