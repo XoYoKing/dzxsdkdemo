@@ -1,23 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-//    signingConfigs {
-//        debug {
-//            //wt
-//            storeFile file('../../Sign/comwtdzxsdkdemo_AppSign_Release.keystore')
-//            storePassword "com.wt.dzxsdkdemo"
-//            keyAlias "com.wt.dzxsdkdemo"
-//            keyPassword "com.wt.dzxsdkdemo"
-//
-//        }
-//        release {
-//            //wt
-//            storeFile file('../../Sign/comwtdzxsdkdemo_AppSign_Release.keystore')
-//            storePassword "com.wt.dzxsdkdemo"
-//            keyAlias "com.wt.dzxsdkdemo"
-//            keyPassword "com.wt.dzxsdkdemo"
-//        }
-//    }
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
@@ -26,7 +9,6 @@ android {
         targetSdkVersion 29
         versionCode 19111723
         versionName "2019.11.17"
-//        signingConfig signingConfigs.release
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         ndk {
