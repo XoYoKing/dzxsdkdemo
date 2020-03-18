@@ -9,7 +9,7 @@
 ## 简单使用
 建议使用之前先把demo跑一下，我对已开放的接口的使用都进行了演示。
 
-- 拷贝 dzxsdk.aar及so库 到目录 app/libs
+- 拷贝 dzxsdkYYYY.MM.DD.aar及so库 到目录 app/libs
     - 见Demo的目录 app/libs
 - 修改 build.gradle 增加对aar库的引用
 ```
@@ -58,7 +58,7 @@ dependencies {
 
 ## License
 ```
-Copyright (c) 2019 YBX
+Copyright (c) 2019~2020 YBX
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
