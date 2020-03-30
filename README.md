@@ -2,9 +2,17 @@
 调用大珍象SDK进行监控设备操作的Demo
 
 ## 接口
-- DZXSDK.openUI_CameraList
-- DZXSDK.openUI_CameraRealPlay
-- DZXSDK.openUI_CameraPlayBack
+- DZXSDK.openUI_CameraList : 根据用户打开对应的设备列表界面
+    - 输入参数
+        - strUserID : 对应用户的微信openid
+- DZXSDK.openUI_CameraRealPlay : 根据指定的摄像头打开其直播界面
+    - 输入参数
+        - strDeviceSerial : 对应设备的序列号，摄像头的序列号或者NVR的序列号
+        - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0
+- DZXSDK.openUI_CameraPlayBack : 根据指定的摄像头打开其回播界面
+    - 输入参数
+        - strDeviceSerial : 对应设备的序列号，摄像头的序列号或者NVR的序列号
+        - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0
 
 ## 简单使用
 建议使用之前先把demo跑一下，我对已开放的接口的使用都进行了演示。
