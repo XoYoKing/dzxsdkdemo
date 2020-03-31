@@ -19,13 +19,13 @@ android {
         }
     }
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.wt.dzxsdkdemo"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 20031723
-        versionName "2020.03.17"
+        versionCode 20033122
+        versionName "2020.03.31"
         signingConfig signingConfigs.release
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -44,6 +44,7 @@ android {
         flatDir {
             dirs 'libs'
         }
+        maven { url 'https://jitpack.io' }
     }
 }
 
@@ -51,6 +52,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    api 'com.github.PhilJay:MPAndroidChart:v3.1.0-alpha'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'

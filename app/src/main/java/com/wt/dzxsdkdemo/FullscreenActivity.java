@@ -9,6 +9,7 @@ import android.view.View;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.github.mikephil.charting.data.PieEntry;
 import com.wt.dzxsdk.DZXSDK;
 
 /**
@@ -111,6 +112,11 @@ public class FullscreenActivity extends AppCompatActivity {
         // operations to prevent the jarring behavior of controls going away
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
+
+        //test Start
+        //MPAndroidChart
+        PieEntry thePieEntry=null;
+        //test End
     }
 
     @Override
@@ -172,8 +178,12 @@ public class FullscreenActivity extends AppCompatActivity {
     }
 
     public void onClickButton2(View v) {
-        String strDeviceSerial="C32940646";
-        int iCameraIndex=4;
+//        String strDeviceSerial="C32940646";
+//        String strDeviceSerial="D39981692";
+//        int iCameraIndex=0;
+
+        String strDeviceSerial="D19841608";
+        int iCameraIndex=5;
         DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
     }
 
