@@ -9,8 +9,12 @@ import android.view.View;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.github.mikephil.charting.data.PieEntry;
 import com.wt.dzxsdk.DZXSDK;
+
+//冲突库测试 Start
+import com.github.mikephil.charting.data.PieEntry;
+import com.google.gson.Gson;
+//冲突库测试 End
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -113,10 +117,11 @@ public class FullscreenActivity extends AppCompatActivity {
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
 
-        //test Start
+        //冲突库测试 Start
         //MPAndroidChart
         PieEntry thePieEntry=null;
-        //test End
+        Gson theGson = null;
+        //冲突库测试 End
     }
 
     @Override
