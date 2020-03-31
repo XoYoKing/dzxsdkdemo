@@ -202,4 +202,9 @@ public class FullscreenActivity extends AppCompatActivity {
         int iCameraIndex=4;
         DZXSDK.openUI_CameraPlayBack(this,strDeviceSerial,iCameraIndex);
     }
+
+    public void onClickButton4(View v) {
+        MyApplication theMyApplication=(MyApplication)getApplication();
+        DZXSDK.openUI_CheckYSSDK(90010,this,theMyApplication);
+    }
 }
