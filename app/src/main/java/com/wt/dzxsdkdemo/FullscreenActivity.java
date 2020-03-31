@@ -190,9 +190,9 @@ public class FullscreenActivity extends AppCompatActivity {
         String strDeviceSerial="D19841608";
         int iCameraIndex=5;
 
-        iCameraIndex=0;
-//        Integer integer = Integer.valueOf(iCameraIndex);
-//        iCameraIndex = Integer.valueOf("0");
+//        iCameraIndex=0;
+        Integer integer = Integer.valueOf(iCameraIndex);
+        iCameraIndex = Integer.valueOf("0");
         strDeviceSerial="D38253294";
         DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
     }
