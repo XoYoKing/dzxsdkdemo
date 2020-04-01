@@ -5,7 +5,8 @@ import android.util.Log;
 
 import com.wt.dzxapp.CrashApplication;
 
-public class MyApplication extends CrashApplication {
+//public class MyApplication extends CrashApplication {
+public class MyApplication extends Application {
     private static final String TAG = "MyApplication";
 
 //    @Override
