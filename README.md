@@ -7,6 +7,10 @@
         - iFrom : 跟踪用的
         - theContext : 当前的上下文实例
         - theApplication : 应用的Application
+- DZXSDK.openUI_setStrWaterMark : 设置自定义水印文本
+    - 输入参数
+        - iFrom : 跟踪用的
+        - strWaterMarkValue : 自定义水印文本
 - DZXSDK.openUI_CameraList : 根据用户打开对应的设备列表界面
     - 输入参数
         - theContext : 当前的上下文实例

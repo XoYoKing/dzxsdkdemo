@@ -185,26 +185,32 @@ public class FullscreenActivity extends AppCompatActivity {
     public void onClickButton2(View v) {
 //        String strDeviceSerial="C32940646";
 //        String strDeviceSerial="D39981692";
+//        String strDeviceSerial="D38253294";
 //        int iCameraIndex=0;
+//        int iCameraIndex=5;
 
-        String strDeviceSerial="D19841608";
-        int iCameraIndex=5;
+        String strDeviceSerial="D30410400";
+        int iCameraIndex=1;
 
-//        iCameraIndex=0;
-        Integer integer = Integer.valueOf(iCameraIndex);
-        iCameraIndex = Integer.valueOf("0");
-        strDeviceSerial="D38253294";
         DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
     }
 
     public void onClickButton3(View v) {
-        String strDeviceSerial="C32940646";
-        int iCameraIndex=4;
+//        String strDeviceSerial="C32940646";
+//        int iCameraIndex=4;
+
+        String strDeviceSerial="D30410400";
+        int iCameraIndex=1;
+
         DZXSDK.openUI_CameraPlayBack(this,strDeviceSerial,iCameraIndex);
     }
 
     public void onClickButton4(View v) {
         MyApplication theMyApplication=(MyApplication)getApplication();
         DZXSDK.openUI_CheckYSSDK(90010,this,theMyApplication);
+    }
+
+    public void onClickButton5(View v) {
+        DZXSDK.openUI_setStrWaterMark(90010,"自定义水印");
     }
 }
