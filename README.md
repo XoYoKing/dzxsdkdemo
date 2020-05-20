@@ -19,12 +19,12 @@
     - 输入参数
         - theContext : 当前的上下文实例
         - strDeviceSerial : 对应设备的序列号，摄像头的序列号或者NVR的序列号
-        - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0；注意：此处的iCameraIndex是真实的通道号，如果从服务器获取的通道号不是真实的，比如从1开始，也就是加了1，这里需要对应减1，否则会出现395451错误
+        - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0；注意：此处的iCameraIndex是真实的通道号，如果从服务器获取的通道号不是真实的，比如从1开始，也就是加了1，这里需要对应减1，否则如果对应通道无视频数据会出现395451错误
 - DZXSDK.openUI_CameraPlayBack : 根据指定的摄像头打开其回播界面
     - 输入参数
         - theContext : 当前的上下文实例
         - strDeviceSerial : 对应设备的序列号，摄像头的序列号或者NVR的序列号
-        - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0；注意：此处的iCameraIndex是真实的通道号，如果从服务器获取的通道号不是真实的，比如从1开始，也就是加了1，这里需要对应减1，否则会出现395451错误
+        - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0；注意：此处的iCameraIndex是真实的通道号，如果从服务器获取的通道号不是真实的，比如从1开始，也就是加了1，这里需要对应减1，否则如果对应通道无视频数据会出现395451错误
 
 ## 简单使用
 建议使用之前先把demo跑一下，我对已开放的接口的使用都进行了演示。
