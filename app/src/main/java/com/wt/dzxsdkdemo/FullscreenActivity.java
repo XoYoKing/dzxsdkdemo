@@ -189,8 +189,8 @@ public class FullscreenActivity extends AppCompatActivity {
 //        int iCameraIndex=0;
 //        int iCameraIndex=5;
 
-        String strDeviceSerial="D30410400";
-        int iCameraIndex=1;
+//        String strDeviceSerial="D30410400";
+//        int iCameraIndex=1;
 
 //        String strDeviceSerial="D19841866";
 //        int iCameraIndex=1;
@@ -205,6 +205,11 @@ public class FullscreenActivity extends AppCompatActivity {
 //        String strDeviceSerial="D36456106";
 //        int iCameraIndex=0;
 
+        String strDeviceSerial="D33502508";
+        int iCameraIndex=1;
+//        String strDeviceSerial="D31094344";
+//        int iCameraIndex=0;
+
         DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
     }
 
@@ -212,8 +217,16 @@ public class FullscreenActivity extends AppCompatActivity {
 //        String strDeviceSerial="C32940646";
 //        int iCameraIndex=4;
 
-        String strDeviceSerial="D30410400";
-        int iCameraIndex=1;
+//        String strDeviceSerial="D30410400";
+//        int iCameraIndex=1;
+
+        String strDeviceSerial="D31094344";
+        int iCameraIndex=0;
+
+
+//        String strDeviceSerial="D29540847";
+//        int iCameraIndex=2;
+
 //        String strDeviceSerial="D29540847";
 //        int iCameraIndex=7;
 
