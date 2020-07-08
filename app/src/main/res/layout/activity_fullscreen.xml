@@ -83,6 +83,63 @@
                 <!--/>-->
 
         </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/editTextCameraCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="E39729654">
+<!--                    android:text="E39729654 - 0">-->
+<!--                    android:text="E05603894 - 60">-->
+<!--                    android:text="D33502508">-->
+
+                </EditText>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/buttonJian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="20dp"
+                        android:paddingHorizontal="40dp"
+                        android:onClick="onClickButtonJian"
+                        android:text="-"
+                        />
+                    <TextView
+                        android:id="@+id/textViewChannel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="0"
+                        >
+                    </TextView>
+                    <Button
+                        android:id="@+id/buttonJia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingVertical="20dp"
+                        android:paddingHorizontal="40dp"
+                        android:onClick="onClickButtonJia"
+                        android:text="+"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 

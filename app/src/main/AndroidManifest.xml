@@ -3,6 +3,7 @@
     package="com.wt.dzxsdkdemo">
 
 <!--    android:name=".MyApplication"-->
+<!--    tools:replace="android:name"-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"

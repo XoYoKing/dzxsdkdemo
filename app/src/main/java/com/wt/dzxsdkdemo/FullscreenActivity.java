@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -205,10 +207,29 @@ public class FullscreenActivity extends AppCompatActivity {
 //        String strDeviceSerial="D36456106";
 //        int iCameraIndex=0;
 
-        String strDeviceSerial="D33502508";
-        int iCameraIndex=1;
+//        String strDeviceSerial="D33502508";
+//        int iCameraIndex=1;
 //        String strDeviceSerial="D31094344";
 //        int iCameraIndex=0;
+
+//        String strDeviceSerial="D78236630";
+//        int iCameraIndex=0;
+
+//        String strDeviceSerial="D80914368";
+//        int iCameraIndex=2;
+
+        String strDeviceSerial="D33502508";
+        String strCamera=getCamera();
+        if ( strCamera.length()>6 )
+        {
+            strDeviceSerial=strCamera;
+        }
+        int iCameraIndex=3;
+        int iChannel=getChannel();
+        if ( iChannel>=0 )
+        {
+            iCameraIndex=iChannel;
+        }
 
         DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
     }
@@ -241,4 +262,64 @@ public class FullscreenActivity extends AppCompatActivity {
     public void onClickButton5(View v) {
         DZXSDK.openUI_setStrWaterMark(90010,"自定义水印");
     }
+
+    private TextView textViewChannel = null;
+    private EditText editTextCameraCode = null;
+    public String getCamera(){
+        if ( editTextCameraCode==null )
+        {
+            editTextCameraCode = findViewById(R.id.editTextCameraCode);
+        }
+        String strCamera=editTextCameraCode.getText().toString();
+        if ( strCamera.length()<8 )
+        {
+            return "";
+        }
+        return strCamera;
+    }
+    public int getChannel() {
+        if ( textViewChannel==null )
+        {
+            textViewChannel = findViewById(R.id.textViewChannel);
+            //return -1;
+        }
+        String strChannel=textViewChannel.getText().toString();
+        if ( strChannel.length()<1 )
+        {
+            return -2;
+        }
+        int iChannel=Integer.parseInt(strChannel);
+        return iChannel;
+    }
+    public void setChannel(int iChannel) {
+        if ( iChannel<0 )
+        {
+            return;
+        }
+        if ( textViewChannel==null )
+        {
+            textViewChannel = findViewById(R.id.textViewChannel);
+        }
+        textViewChannel.setText(""+iChannel);
+    }
+    public void onClickButtonJian(View v) {
+        int iChannel=getChannel();
+        iChannel=iChannel-1;
+        if ( iChannel<0 )
+        {
+            iChannel=0;
+        }
+        setChannel(iChannel);
+    }
+
+    public void onClickButtonJia(View v) {
+        int iChannel=getChannel();
+        iChannel=iChannel+1;
+        if ( iChannel<0 )
+        {
+            iChannel=0;
+        }
+        setChannel(iChannel);
+    }
+
 }
