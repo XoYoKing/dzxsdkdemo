@@ -2,6 +2,8 @@
 调用大珍象SDK进行监控设备操作的Demo
 
 ## 修改记录
+### 2020-11-20 11:30
+- 修改SDK中回放时的水印问题
 ### 2020-11-18 19:30
 - 修改SDK初始化部分，不再在Application的onCreate中进行萤石SDK接口初始化，而是在调用除openUI_setStrWaterMark之外的接口时检查萤石SDK接口初始化，如果没有进行过萤石SDK接口初始化，则进行；想要自行提前初始化可以调用openUI_CheckYSSDK，多次调用不会重复初始化。具体可以通过包含initSDK的Log查看初始化的时机和过程
 
