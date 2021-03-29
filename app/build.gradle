@@ -24,8 +24,8 @@ android {
         applicationId "com.wt.dzxsdkdemo"
         minSdkVersion 23
         targetSdkVersion 29
-        versionCode 21010711
-        versionName "2021.01.07"
+        versionCode 21032914
+        versionName "2021.03.29"
         signingConfig signingConfigs.release
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

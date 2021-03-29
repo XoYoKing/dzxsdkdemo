@@ -64,6 +64,7 @@
                 android:paddingHorizontal="40dp"
                 android:onClick="onClickButton4"
                 android:text="自行初始化"
+                android:visibility="invisible"
                 />
             <Button
                 android:id="@+id/button5"
@@ -98,7 +99,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="C62118893">
+                    android:text="F47870009">
+<!--                    android:text="C62118893">-->
 <!--                    android:text="D84617045">-->
 <!--                    android:text="E39729654 - 0">-->
 <!--                    android:text="E05603894 - 60">-->
