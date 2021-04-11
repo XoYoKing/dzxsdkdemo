@@ -220,7 +220,8 @@ public class FullscreenActivity extends AppCompatActivity {
 
         //String strDeviceSerial="D33502508";
         //String strDeviceSerial="D84617045";
-        String strDeviceSerial="F47870009";
+        //String strDeviceSerial="F47870009";
+        String strDeviceSerial="D19841866";
         String strCamera=getCamera();
         if ( strCamera.length()>6 )
         {

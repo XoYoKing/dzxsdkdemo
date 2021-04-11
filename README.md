@@ -8,6 +8,8 @@
 - 修改SDK中回放时的水印问题
 ### 2020-11-18 19:30
 - 修改SDK初始化部分，不再在Application的onCreate中进行萤石SDK接口初始化，而是在调用除openUI_setStrWaterMark之外的接口时检查萤石SDK接口初始化，如果没有进行过萤石SDK接口初始化，则进行；想要自行提前初始化可以调用openUI_CheckYSSDK，多次调用不会重复初始化。具体可以通过包含initSDK的Log查看初始化的时机和过程
+### 2021-04-11 22:00
+- 修改使用集成了萤石SDK4.16.0版本的DZXSDK
 
 ## 接口
 - DZXSDK.openUI_CheckYSSDK : 检查萤石SDK的初始化状态，如果未初始化则执行初始化操作
@@ -37,13 +39,17 @@
 ## 简单使用
 建议使用之前先把demo跑一下，我对已开放的接口的使用都进行了演示。
 
-- 拷贝 dzxsdkYYYY.MM.DD.aar及so库 到目录 app/libs
+- 拷贝 dzxsdkYYYY.MM.DD.aar、dzxsdk_commonYYYY.MM.DD.aar及so库 到目录 app/libs
     - 见Demo的目录 app/libs
 - 修改 build.gradle 增加对aar库的引用
 ```
 dependencies {
     ...
     implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
+
+    //必需，DZXSDK使用
+    //implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'    
     ...
 }
 ```

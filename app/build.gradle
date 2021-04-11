@@ -18,14 +18,14 @@ android {
             keyPassword "com.wt.dzxsdkdemo"
         }
     }
-    compileSdkVersion 29
+    compileSdkVersion 28
     buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.wt.dzxsdkdemo"
         minSdkVersion 23
-        targetSdkVersion 29
-        versionCode 21032914
-        versionName "2021.03.29"
+        targetSdkVersion 27
+        versionCode 21033010
+        versionName "2021.03.30"
         signingConfig signingConfigs.release
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -61,4 +61,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //必需，DZXSDK使用
+    //implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
 }
