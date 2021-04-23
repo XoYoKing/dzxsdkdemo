@@ -181,7 +181,8 @@ public class FullscreenActivity extends AppCompatActivity {
 
     public void onClickButton1(View v) {
         String strUserID="oJ0qB1utZD9wm8c4rxl7eoBgmUkc";
-        DZXSDK.openUI_CameraList(this,strUserID);
+        MyApplication theMyApplication=(MyApplication)getApplication();
+        DZXSDK.openUI_CameraList(90010,this,theMyApplication,strUserID);
     }
 
     public void onClickButton2(View v) {
@@ -234,7 +235,8 @@ public class FullscreenActivity extends AppCompatActivity {
             iCameraIndex=iChannel;
         }
 
-        DZXSDK.openUI_CameraRealPlay(this,strDeviceSerial,iCameraIndex);
+        MyApplication theMyApplication=(MyApplication)getApplication();
+        DZXSDK.openUI_CameraRealPlay(90020,this,theMyApplication,strDeviceSerial,iCameraIndex);
     }
 
     public void onClickButton3(View v) {
@@ -266,16 +268,18 @@ public class FullscreenActivity extends AppCompatActivity {
 //        String strDeviceSerial="D29540847";
 //        int iCameraIndex=7;
 
-        DZXSDK.openUI_CameraPlayBack(this,strDeviceSerial,iCameraIndex);
+        MyApplication theMyApplication=(MyApplication)getApplication();
+        DZXSDK.openUI_CameraPlayBack(90030,this,theMyApplication,strDeviceSerial,iCameraIndex);
     }
 
     public void onClickButton4(View v) {
         MyApplication theMyApplication=(MyApplication)getApplication();
-        DZXSDK.openUI_CheckYSSDK(90010,this,theMyApplication);
+        DZXSDK.openUI_CheckYSSDK(90040,this,theMyApplication);
     }
 
     public void onClickButton5(View v) {
-        DZXSDK.openUI_setStrWaterMark(90010,"自定义水印");
+        MyApplication theMyApplication=(MyApplication)getApplication();
+        DZXSDK.openUI_setStrWaterMark(90010,this,theMyApplication,"自定义水印");
     }
 
     private TextView textViewChannel = null;

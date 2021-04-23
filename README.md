@@ -10,29 +10,40 @@
 - 修改SDK初始化部分，不再在Application的onCreate中进行萤石SDK接口初始化，而是在调用除openUI_setStrWaterMark之外的接口时检查萤石SDK接口初始化，如果没有进行过萤石SDK接口初始化，则进行；想要自行提前初始化可以调用openUI_CheckYSSDK，多次调用不会重复初始化。具体可以通过包含initSDK的Log查看初始化的时机和过程
 ### 2021-04-11 22:00
 - 修改使用集成了萤石SDK4.16.0版本的DZXSDK
+### 2021-04-23 15:20
+- 修正了清单使用Application，Application不继承自CrashApplication，会报空的问题
+- 所有接口加入了 iFrom、theContext、theApplication三个参数
 
 ## 接口
 - DZXSDK.openUI_CheckYSSDK : 检查萤石SDK的初始化状态，如果未初始化则执行初始化操作
     - 输入参数
-        - iFrom : 跟踪用的
+        - iFrom : 跟踪用的,随便输入一个用于标识的数字
         - theContext : 当前的上下文实例
-        - theApplication : 应用的Application
+        - theApplication : 应用的Application，没有请输入null
 - DZXSDK.openUI_setStrWaterMark : 设置自定义水印文本
     - 输入参数
-        - iFrom : 跟踪用的
+        - iFrom : 跟踪用的,随便输入一个用于标识的数字
+        - theContext : 当前的上下文实例
+        - theApplication : 应用的Application，没有请输入null
         - strWaterMarkValue : 自定义水印文本
 - DZXSDK.openUI_CameraList : 根据用户打开对应的设备列表界面
     - 输入参数
+        - iFrom : 跟踪用的,随便输入一个用于标识的数字
         - theContext : 当前的上下文实例
+        - theApplication : 应用的Application，没有请输入null
         - strUserID : 对应用户的微信openid
 - DZXSDK.openUI_CameraRealPlay : 根据指定的摄像头打开其直播界面
     - 输入参数
+        - iFrom : 跟踪用的,随便输入一个用于标识的数字
         - theContext : 当前的上下文实例
+        - theApplication : 应用的Application，没有请输入null
         - strDeviceSerial : 对应设备的序列号，摄像头的序列号或者NVR的序列号
         - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0
 - DZXSDK.openUI_CameraPlayBack : 根据指定的摄像头打开其回播界面
     - 输入参数
+        - iFrom : 跟踪用的,随便输入一个用于标识的数字
         - theContext : 当前的上下文实例
+        - theApplication : 应用的Application，没有请输入null
         - strDeviceSerial : 对应设备的序列号，摄像头的序列号或者NVR的序列号
         - iCameraIndex : 使用NVR的序列号时iCameraIndex就是通道号，否则iCameraIndex=0
 
